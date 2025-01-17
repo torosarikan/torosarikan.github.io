@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toros Arikan</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <button class="navbar-toggle" aria-label="Toggle navigation">
+            ☰
+        </button>
+        <div class="navbar-links">
+            <a href="index.html">Home</a>
+            <a href="Research.html">Research</a>
+            <a href="Teaching.html" target="_blank">Teaching</a>
+            <a href="CV.pdf" target="_blank">CV</a>
+            <a href="Publications.html">Publications</a>
+            <a href="https://scholar.google.com/citations?user=MHHXto0AAAAJ&hl=en" target="_blank">Google Scholar</a>
+        </div>
+    </nav>
+    <main>
+        <section class="intro">
+            <div class="text-content">
+                <h1>Toros Arikan</h1>
+                <p>I am a postdoctoral researcher in ECE at Rice University, working under the guidance of <a href="https://richb.rice.edu/" target="_blank" style="color: inherit; text-decoration: none; font-style: italic;" onmouseover="this.style.color='blue'; this.style.textDecoration='underline';" onmouseout="this.style.color='inherit'; this.style.textDecoration='none';">Professor Richard Baraniuk</a>. I obtained my B.S. and M.S. degrees from UIUC, and my Ph.D. from MIT. I am passionate about solving difficult open problems in communications and signal processing using new optimization and deep learning tools. My current research centers on underwater acoustic localization and environment sensing, and on solving graph-based optimization problems through Recurrent Convolutional Neural Networks (RCNNs). My past research involved developing new receivers for HF and underwater acoustic communications, and exploring indoor ultra-wideband radio localization. I am currently seeking tenure-track assistant professorship positions in electrical and computer engineering.</p>
+            </div>
+            <img src="portrait.png" alt="Toros Arikan" class="profile-image"> 
+        </section>
+    </main>
+    <footer class="footer-bar">
+        <div class="footer-images">
+            <img src="Logo.png" alt="Logo" class="footer-image footer-image-logo">
+        </div>
+        <div class="footer-contact">
+            <p>Email: toros@rice.edu</p> 
+            <p>LinkedIn:</p>
+            <p><a href="https://www.linkedin.com/in/toros-arikan-510b3b93/" target="_blank">https://www.linkedin.com/in/toros-arikan-510b3b93/</a></p>
+        </div>
+        <p class="footer-rights">© 2025 Toros Arikan. All rights reserved.</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.querySelector('.navbar-toggle');
+            const navbarLinks = document.querySelector('.navbar-links');
+    
+            toggleButton.addEventListener('click', function() {
+                navbarLinks.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+</html>
+
+
