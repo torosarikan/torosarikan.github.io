@@ -1,0 +1,395 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh; 
+}
+
+.navbar {
+    background-color: #add8e6;
+    padding: 25px; /* Increased padding for a taller bar */
+    display: flex;
+    justify-content: space-between; /* Changed from space-around to space-between */
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar a {
+    color: rgb(11, 1, 1);
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.navbar a:hover {
+    color: #f0f0f0;
+}
+
+.navbar-toggle {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.navbar-links {
+    display: flex;
+    justify-content: space-between; /* Ensure links are evenly spread */
+    flex-grow: 1; /* Ensure the links container takes up available space */
+    align-items: center;
+    gap: 20px;
+}
+
+
+main {
+    margin-top: 60px; /* Space for navbar */
+    flex-grow: 1; /* Ensures it takes the needed space pushing the footer down */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.footer-bar {
+    background-color: #add8e6;
+    padding: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    width: 100%;
+    
+}
+
+.footer-images{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: right;
+    gap: 30px;
+    flex-wrap: nowrap; 
+    
+   
+}
+
+.footer-contact p {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 4px 0;
+    color: #444; 
+    font-family: 'Courier New', Courier, monospace;
+   
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+    margin-left: 30px; /* Adjust as needed */
+    text-align: left;
+    flex: 1; /* Allows it to take necessary space */
+    flex-wrap: nowrap;
+}
+
+.footer-image {
+    margin-right: 35px; /* Adds space between images */
+}
+
+.footer-image-logo { max-width: 80px; }
+.footer-image-rice { max-width: 300px; }
+.footer-image-ful { max-width: 190px; }
+
+
+.footer-rights {
+    margin-top: 20px; /* Ensures space above the copyright text */
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-bar {
+        flex-direction: column;
+    }
+
+    .footer-images,
+    .footer-contact {
+        align-items: center;
+        margin-bottom: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .footer-rights {
+        order: 3; 
+    }
+
+    .navbar-toggle {
+        display: block;
+    }
+    
+    .navbar-links {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        width: 100%;
+        background-color: #add8e6; /* Adjust as needed */
+        position: absolute;
+        top: 60px; /* Adjust as needed */
+        left: 0;
+        padding: 20px 0;
+    }
+    
+    .navbar-links.active {
+        display: flex;
+    }
+
+    .navbar-links a {
+        font-size: 20px; /* Increase font size */
+        padding: 10px 0; /* Increase padding for more spacing */
+        text-align: center; /* Center align text */
+    }
+}
+
+
+.intro {
+    /* height: 60vh; Full viewport height  Remove if more is added */
+    padding: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row-reverse;
+    gap: 20px;
+    width: 100%;
+    max-width: 1250px;
+    transform: translateX(-10px);
+    animation: fadeIn 1s ease-out;
+    
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        margin-top: 80px; 
+    }
+    .profile-image {
+        width: 50px; 
+    }
+    .text-content {
+        max-width: 100%; 
+    }
+    .intro {
+        padding: 20px; 
+        gap: 10px;
+        transform: translateX(0);
+    }
+    .text-content p {
+        font-size: 10px;       
+    }
+
+    .text-content h1 {
+        font-size: 30px; 
+    }
+
+    .text-content h2 {
+        font-size: 25px; 
+        width: 100%;
+    }
+
+    .text-content h3 {
+        font-size: 20px; 
+    }
+
+    .research-entry {
+        flex-direction: column;
+        margin-left: -1%;
+        align-items: center;
+        width: 100%;
+    }
+    
+    .research-image {
+        min-width: 350px;  
+        height: auto; 
+        width: 100%;  
+        text-align: justify;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .research-description p {
+        width: 100%;  
+        margin-top: 10px;
+        margin-bottom: 10px;
+        word-break: break-word;
+        font-size: 12px;
+        
+    }
+}
+
+
+.profile-image, .text-content h1, .text-content p {
+    animation: fadeIn 1.5s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+
+.profile-image {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+}
+
+/* .text-content {
+    max-width: 60%;
+} */
+
+h1 {
+    font-size: 50px;
+    margin: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+    font-family: 'Vladimir Script', cursive;
+    
+}
+
+p {
+    font-size: 18px; 
+    line-height: 1.6; 
+    color: #666; 
+    text-align: justify; 
+    margin: 0 0 20px;
+}
+
+.footer-contact a {
+    color: #0077b5; 
+    text-decoration: none; 
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-contact a:hover {
+    color: #005691; 
+    text-decoration: underline; 
+}
+
+
+
+
+.publications {
+    margin-top: -15px; /* Adds space between the header and the publications list */
+    width: 90%; /* Restricts the width to prevent stretching too far to the right */
+    /* max-width: 1200px;  */
+    margin-left: auto; /* Together with margin-right, centers the content */
+    margin-right: auto;
+}
+
+.publications ul {
+    list-style-type: none;
+    padding: 0;
+    color: #333;
+}
+
+.publications li {
+    margin-bottom: 20px;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: justify; 
+    color: #333;
+}
+
+.publications a {
+    text-decoration: none; 
+    color: #0056b3; 
+}
+
+.publications a:hover {
+    text-decoration: underline; 
+}
+
+.publications em {
+    font-style: italic;
+    color: #333;
+}
+
+
+.research-entry {
+    display: flex;
+    flex-direction: column; /* Always display content in a column */
+    align-items: center; /* Center the items */
+    justify-content: flex-start; /* Align items at the top */
+    text-align: left;
+    /* margin-left: auto; 
+    margin-right: auto; */
+    width: 90%;
+    margin-left: -1%;
+    gap: 20px; /* Adds space between the items */
+    /* padding: 20px; */
+}
+
+.research-description {
+    width: 100%; /* Make the text take full width */
+     /* Justify text for readability */
+    padding: 10px;
+}
+
+.research-image {
+    width: 100%; /* Make the image take full width */
+    max-width: 600px; /* Restrict max image width */
+    height: auto;
+    margin-top: 5px; /* Adds space between text and image */
+    margin-bottom: 30px; /* Adds space between image and next text */
+}
+
+.research-description p {
+    word-break: break-word;
+    font-size: 16px;
+    text-align: justify;
+}
+
+
+h3 {
+    margin-top: 40px;
+    width: 90%; 
+    font-size: 28px;
+    /* text-align: left; */
+    /* width: 90%;  */
+    /* max-width: 1200px;  */
+    /* margin-left: auto; 
+    margin-right: auto; */
+}
+
+h2 {
+    /* margin-top: 40px; */
+    width: 90%; 
+    font-size: 24px;
+    /* width: 90%;  */
+    /* max-width: 1200px;  */
+    /* margin-left: auto;  */
+    /* margin-right: auto; */
+}
+
