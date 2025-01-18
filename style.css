@@ -106,8 +106,8 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center; 
-    margin-left: 30px; /* Adjust as needed */
-    text-align: left;
+    margin-left: -120px; /*Adjust as needed */
+    text-align: center;
     flex: 1; /* Allows it to take necessary space */
     flex-wrap: nowrap;
 }
@@ -274,7 +274,7 @@ h1 {
     text-align: center;
     font-weight: bold;
     color: #333;
-    font-family: 'Vladimir Script', cursive;
+    font-family: 'Arial, sans-serif', bold;
     
 }
 
